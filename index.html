@@ -7,8 +7,18 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+
+    <style>
+    model-viewer {
+        width: 800px;
+        height: 600px;
+      }
+    </style>
   </head>
   <body>
+    <body style="background-color: rgba(155, 0, 245, 0.075);"></body>
     <nav id="desktop-nav">
       <div class="logo">Daniil Meluzov</div>
       <div>
@@ -38,8 +48,18 @@
     </nav>
     <section id="profile">
       <div class="section__pic-container">
-        
-        <img src="./assets/DaniilMeluzovFullBody_Transparent.png" alt="Daniil Meluzov Profile picture" />
+        <!--<img src="./assets/DaniilMeluzovFullBody_Transparent.png" alt="Daniil Meluzov Profile picture" />-->
+        <model-viewer
+        orbit-sensitivity="2"
+        interaction-prompt="none"
+        id="reveal"
+        camera-controls="true"
+        auto-rotate="true"
+        src="./assets/Dan_FullPS1Body_MaybeThis.glb"
+        alt="Bold [3D]"
+        ar-status="not-presenting"
+        style="width: 80%; height: 80%; position: absolute; left: -100px; top: 170px; z-index: 0; display: block; background-color: transparent;">
+      </model-viewer>
       </div>
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
